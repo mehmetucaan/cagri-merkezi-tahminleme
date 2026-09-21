@@ -55,7 +55,7 @@ def _egit(icerik, ad, kural, bas, son, hedef, n_hafta, model_adi):
     m = modeller.model_olustur(model_adi, ozellikler, hedef)
     t0 = time.time()
     tahmin = m.egit_tahmin(tr, te)
-    sure = time.time() - t0"
+    sure = time.time() - t0
     onem = m.ozellik_onemi() if hasattr(m, "ozellik_onemi") else None
     return pd.Series(tahmin, index=te.index), sure, onem
 
